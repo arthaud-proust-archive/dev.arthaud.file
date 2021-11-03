@@ -6,13 +6,14 @@ body {
     align-content: center;
     font-family: Arial;
     background: #E3E4E4;
-    min-height: 100vh;
+    min-height: calc( 100vh - 200px);
     margin: 0;
-    padding-top: 50px;
+    padding: 100px 0;
 }
 h1 {
     margin-top: 0;
 }
+a {text-decoration: none;}
 
 #files {
     list-style: none;
@@ -46,7 +47,7 @@ h1 {
 }
 
 
-button.downAll, button.downFile {
+button.downAll, button.downFile, a.downAll, a.downFile {
     position: relative;
     border: none;
     background: #4466d6;
@@ -62,16 +63,16 @@ button.downAll, button.downFile {
 
 
 
-button.downAll:hover, button.downFile:hover {
-    background: #3657c4;
+button.downAll:hover, button.downFile:hover, a.downAll:hover, a.downFile:hover {
+    background: #2f4fb6;
     color: #ddd;
 }
 
-button.loading {
+button.loading, a.loading {
     color: transparent !important;
     background: #2442a7 !important;
 }
-button.loading::after {
+button.loading::after, a.loading::after {
     content: '';
     position: absolute;
     top: calc(50% - 5px);
@@ -86,11 +87,11 @@ button.loading::after {
     animation: rotate 1s infinite linear;
 }
 
-button.error {
+button.error, a.error {
     color: transparent !important;
     background: #b62520 !important;
 }
-button.error::after {
+button.error::after, a.error::after {
     content: 'Erreur';
     position: absolute;
     top: 50%;
@@ -99,11 +100,11 @@ button.error::after {
     transform: translate(-50%, -50%);    
 }
 
-button.success {
+button.success, a.success {
     color: transparent !important;
     background: #3dad33 !important;
 }
-button.success::after {
+button.success::after, a.success::after {
     content: 'Téléchargé';
     position: absolute;
     top: 50%;

@@ -1,0 +1,11 @@
+png
+jpg
+jpeg
+webp
+gif
+ico
+txt
+html
+css
+js
+xml
